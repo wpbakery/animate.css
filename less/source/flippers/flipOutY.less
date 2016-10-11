@@ -1,0 +1,20 @@
+@keyframes vce-o-animate--flipOutY {
+  from {
+    transform: perspective(400px);
+  }
+
+  30% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+.vce-o-animate--flipOutY {
+  backface-visibility: visible !important;
+  animation-name: vce-o-animate--flipOutY;
+}
