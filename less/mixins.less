@@ -1,0 +1,22 @@
+.make-media (@animation: false, @size: false, @options: false, @value: false, @important: false) {
+  .vce-o-animate--@{animation}-@{size} {
+    animation-name: ~"vce-o-animate--@{animation}";
+
+    & when not (@options = false) and (@important = false) {
+      @{options}: @value;
+    }
+
+    & when not (@options = false) and not (@important = false) {
+        @{options}: @value !important;
+    }
+  }
+}
+
+.loop (@array: false, @size: false) {
+  .create-media(@i: length(@array)) when (@i > 0) {
+    .create-media(@i - 1);
+    @name: extract(@array, @i);
+    .make-media(@animation: @name, @size: @size)
+  }
+  .create-media;
+}
