@@ -1191,6 +1191,81 @@
 .vce-o-animate--zoomInUp {
   animation-name: vce-o-animate--zoomInUp;
 }
+@keyframes vce-o-animate--zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}
+.vce-o-animate--zoomOut {
+  animation-name: vce-o-animate--zoomOut;
+}
+@keyframes vce-o-animate--zoomOutDown {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+.vce-o-animate--zoomOutDown {
+  animation-name: vce-o-animate--zoomOutDown;
+}
+@keyframes vce-o-animate--zoomOutLeft {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.1) translate3d(-2000px, 0, 0);
+    transform-origin: left center;
+  }
+}
+.vce-o-animate--zoomOutLeft {
+  animation-name: vce-o-animate--zoomOutLeft;
+}
+@keyframes vce-o-animate--zoomOutRight {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.1) translate3d(2000px, 0, 0);
+    transform-origin: right center;
+  }
+}
+.vce-o-animate--zoomOutRight {
+  animation-name: vce-o-animate--zoomOutRight;
+}
+@keyframes vce-o-animate--zoomOutUp {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+.vce-o-animate--zoomOutUp {
+  animation-name: vce-o-animate--zoomOutUp;
+}
 @media (min-width: 0) and (max-width: 543px) {
   .vce-o-animate--bounce-xs {
     animation-name: vce-o-animate--bounce;
